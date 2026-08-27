@@ -5,13 +5,6 @@
 //  Created by Tecsup on 27/08/26.
 //
 
-import SwiftUI
+import Foundation
 
-@main
-struct lab02App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
+

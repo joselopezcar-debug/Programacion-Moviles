@@ -3,21 +3,25 @@ import Foundation
 // --- DATOS DE ENTRADA (Primer Commit) ---
 
 print("Ingrese el título del libro:")
-let tituloLibro = readLine() ?? "Libro Desconocido"
+// MODIFICADO PARA PRUEBA: Cambiamos readLine() por el texto directo
+let tituloLibro = "Cien años de soledad"
 
 print("Ingrese el tipo de usuario (Alumno, Docente, Admin):")
-let tipoUsuario = readLine() ?? "Alumno"
+// MODIFICADO PARA PRUEBA: Cambiamos readLine() por el usuario a probar ("Alumno", "Docente" o "Admin")
+let tipoUsuario = "Alumno"
 
 // Definimos un formato para ingresar las fechas (Año-Mes-Día)
 let dateFormatter = DateFormatter()
 dateFormatter.dateFormat = "yyyy-MM-dd"
 
 print("Ingrese la fecha de préstamo (AAAA-MM-DD):")
-let fechaPrestamoStr = readLine() ?? ""
+// MODIFICADO PARA PRUEBA: Forzamos la cadena al 1 de agosto
+let fechaPrestamoStr = "2026-08-27"
 let fechaPrestamo = dateFormatter.date(from: fechaPrestamoStr) ?? Date()
 
 print("Ingrese la fecha de devolución real (AAAA-MM-DD):")
-let fechaDevolucionStr = readLine() ?? ""
+// MODIFICADO PARA PRUEBA: Forzamos la cadena al 3 de septiembre
+let fechaDevolucionStr = "2026-09-08"
 let fechaDevolucion = dateFormatter.date(from: fechaDevolucionStr) ?? Date()
 
 
@@ -55,7 +59,7 @@ let diasRetraso = max(0, diasTotalesPrestamo - diasPermitidos)
 
 // Variables para el resultado final
 var multaTotal = 0.0
-var situacionUsuario = "habilitado"
+var situacionUsuario = "Activo"
 
 // 5. Calcular la multa acumulativa con recargos por tramos
 if diasRetraso > 0 {

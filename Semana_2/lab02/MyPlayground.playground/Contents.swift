@@ -14,4 +14,5 @@ let parcialNota = Double(readLine() ?? "0") ?? 0
 let trabajoNota = Double(readLine() ?? "0") ?? 0
 let finalNota = Double(readLine() ?? "0") ?? 0
  // commit del calculo
+let promedio = (parcialNota * parcial) + (trabajoNota * trabajo) + (finalNota * final)
  // commit de mostrar los datos

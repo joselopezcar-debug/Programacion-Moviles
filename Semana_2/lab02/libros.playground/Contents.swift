@@ -78,3 +78,24 @@ if diasRetraso > 0 {
         multaTotal += tarifaDiaria * recargo
     }
 }
+
+// --- SALIDA DE DATOS (Tercer Commit) ---
+
+// Formateador para mostrar las fechas de manera amigable
+let formatoSalida = DateFormatter()
+formatoSalida.dateStyle = .medium
+formatoSalida.locale = Locale(identifier: "es_ES")
+
+let estadoDevolucion = diasRetraso > 0 ? "Con atraso" : "A tiempo"
+
+print("\n================ RESUMEN DE DEVOLUCIÓN ================")
+print("📘 Libro: \(tituloLibro)")
+print("👤 Tipo de Usuario: \(tipoUsuario.capitalized)")
+print("📅 Fecha de Préstamo: \(formatoSalida.string(from: fechaPrestamo))")
+print("⏳ Fecha Límite: \(formatoSalida.string(from: fechaLimite))")
+print("📆 Fecha de Devolución: \(formatoSalida.string(from: fechaDevolucion))")
+print("🛑 Días de Atraso: \(diasRetraso) día(s)")
+print("💰 Multa Total: $\(String(format: "%.2f", multaTotal))")
+print("📋 Estado de Devolución: \(estadoDevolucion)")
+print("⚠️ Situación del Usuario: \(situacionUsuario)")
+print("=======================================================")

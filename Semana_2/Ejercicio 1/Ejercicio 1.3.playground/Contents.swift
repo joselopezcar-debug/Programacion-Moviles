@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // PREDICT 1: "Dentro del rango" (x=10 está entre 5 y 20)
 let x = 10

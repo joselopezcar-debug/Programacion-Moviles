@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // PREDICT 6: Valor total = 15 (1+2+3+4+5), 5 iteraciones
 var total = 0

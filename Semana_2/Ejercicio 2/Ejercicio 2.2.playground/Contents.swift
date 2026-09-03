@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // PREDICT 4: "28 o 29 días" (febrero)
 let mes = 2

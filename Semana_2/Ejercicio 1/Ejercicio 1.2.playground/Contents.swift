@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // ===== FIX: Encuentra y corrige los 3 errores =====
 

@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // ===== EJERCICIO 2: SWITCH =====
 

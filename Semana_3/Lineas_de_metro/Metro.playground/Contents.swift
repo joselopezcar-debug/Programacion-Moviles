@@ -36,3 +36,70 @@ for (linea, estaciones) in lineas {
         estacionALinea[estacion] = linea
     }
 }
+
+// 1. MÉTODOS DE LA TARJETA (Extensiones de funcionalidad)
+extension TarjetaTransporte {
+    mutating func recargar(monto: Double) {
+        guard monto > 0 else {
+            print("\n❌ El monto a recargar debe ser mayor a cero.")
+            return
+        }
+        saldo += monto
+        print("\n💳 Recarga exitosa. Nuevo saldo: S/ \(String(format: "%.2f", saldo))")
+    }
+    
+    mutating func descontar(tarifa: Double) -> Bool {
+        if saldo >= tarifa {
+            saldo -= tarifa
+            print("\n✅ Pasaje cobrado. Saldo restante: S/ \(String(format: "%.2f", saldo))")
+            return true
+        } else {
+            print("\n❌ Saldo insuficiente (S/ \(String(format: "%.2f", saldo))). El pasaje cuesta: S/ \(String(format: "%.2f", tarifa))")
+            return false
+        }
+    }
+}
+
+// 2. ALGORITMO DE BÚSQUEDA DE RUTA
+let buscarRuta = { (inicio: String, fin: String) -> [String] in
+    var cola: [(estacion: String, ruta: [String])] = [(inicio, [inicio])]
+    var visitados: Set<String> = []
+    
+    while !cola.isEmpty {
+        let (actual, rutaActual) = cola.removeFirst()
+        if actual == fin { return rutaActual }
+        if visitados.contains(actual) { continue }
+        visitados.insert(actual)
+        
+        let lineaActual = estacionALinea[actual] ?? ""
+        
+        // Vecinos en la misma línea
+        if let estaciones = lineas[lineaActual] {
+            if let index = estaciones.firstIndex(of: actual) {
+                if index > 0 {
+                    let vecino = estaciones[index - 1]
+                    if !visitados.contains(vecino) { cola.append((vecino, rutaActual + [vecino])) }
+                }
+                if index < estaciones.count - 1 {
+                    let vecino = estaciones[index + 1]
+                    if !visitados.contains(vecino) { cola.append((vecino, rutaActual + [vecino])) }
+                }
+            }
+        }
+        
+        // Transbordos
+        if let lineasConectadas = conexiones[actual] {
+            for otraLinea in lineasConectadas {
+                if otraLinea != lineaActual, let estacionesOtraLinea = lineas[otraLinea] {
+                    for vecino in estacionesOtraLinea {
+                        if !visitados.contains(vecino), let indexActual = estacionesOtraLinea.firstIndex(of: actual),
+                           let indexVecino = estacionesOtraLinea.firstIndex(of: vecino), abs(indexActual - indexVecino) == 1 {
+                            cola.append((vecino, rutaActual + [vecino]))
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return []
+}

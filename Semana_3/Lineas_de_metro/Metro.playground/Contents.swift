@@ -170,7 +170,8 @@ while ejecutarMenu {
                     print("2. Bloquear/Cerrar una estación")
                     print("3. Desbloquear/Abrir una estación")
                     print("4. Ver estaciones cerradas")
-                    print("5. Volver al menú de pasajero")
+                    print("5. Ver estaciones activas por línea")
+                    print("6. Volver al menú de pasajero")
                     print("Seleccione una opción técnica: ", terminator: "")
                     
                     if let entradaAdmin = readLine(), let opcAdmin = Int(entradaAdmin) {
@@ -208,6 +209,17 @@ while ejecutarMenu {
                                 print("🚨 Estaciones cerradas: \(estacionesBloqueadas.joined(separator: ", "))")
                             }
                         case 5:
+                            print("\n🗺️ --- ESTACIONES ACTIVAS EN LA RED ---")
+                            for (linea, estaciones) in lineas {
+                                // Filtrar las estaciones que NO están en el conjunto de bloqueadas
+                                let activas = estaciones.filter { !estacionesBloqueadas.contains($0) }
+                                if activas.isEmpty {
+                                    print("⚠️ \(linea): Sin estaciones operativas temporalmente.")
+                                } else {
+                                    print("🟢 \(linea): \(activas.joined(separator: ", "))")
+                                }
+                            }
+                        case 6:
                             print("Saliendo del modo administrador...")
                             enModoAdmin = false
                         default:

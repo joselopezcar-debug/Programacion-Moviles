@@ -103,3 +103,130 @@ let buscarRuta = { (inicio: String, fin: String) -> [String] in
     }
     return []
 }
+
+// 1. VARIABLES DE ESTADO DEL SISTEMA Y ADMINISTRACIÓN
+var miTarjeta = TarjetaTransporte(id: "LIMA-2026", saldo: 0.0)
+var tarifaActual = TARIFA_METRO
+var estacionesBloqueadas: Set<String> = []
+let CLAVE_ADMIN = "admin123"
+
+var ejecutarMenu = true
+
+// 2. BUCLE DEL MENÚ INTERACTIVO PRINCIPAL
+print("=== BIENVENIDO AL SISTEMA DEL METRO DE LIMA ===")
+
+while ejecutarMenu {
+    print("\n--- MENÚ DE PASAJERO ---")
+    print("1. Ver saldo de la tarjeta")
+    print("2. Recargar tarjeta")
+    print("3. Simular viaje (Pasar por torniquete)")
+    print("4. Ingresar al Modo Administrador")
+    print("5. Salir")
+    print("Seleccione una opción: ", terminator: "")
+    
+    if let entrada = readLine(), let opcion = Int(entrada) {
+        switch opcion {
+        case 1:
+            print("\n💳 Tarjeta ID: \(miTarjeta.id) | Saldo actual: S/ \(String(format: "%.2f", miTarjeta.saldo))")
+            
+        case 2:
+            print("Ingrese el monto a recargar: S/ ", terminator: "")
+            if let entradaMonto = readLine(), let monto = Double(entradaMonto) {
+                miTarjeta.recargar(monto: monto)
+            } else {
+                print("❌ Monto inválido.")
+            }
+            
+        case 3:
+            print("Ingrese estación de origen: ", terminator: "")
+            let origen = readLine() ?? ""
+            print("Ingrese estación de destino: ", terminator: "")
+            let destino = readLine() ?? ""
+            
+            // Validar que las estaciones existan en la red
+            if estacionALinea[origen] == nil || estacionALinea[destino] == nil {
+                print("❌ Una o ambas estaciones no existen en la red del metro.")
+            } else if estacionesBloqueadas.contains(origen) || estacionesBloqueadas.contains(destino) {
+                print("❌ El viaje no se puede realizar porque una de las estaciones está cerrada por mantenimiento.")
+            } else {
+                // Verificar saldo antes de permitir el viaje con la tarifa del sistema
+                if miTarjeta.descontar(tarifa: tarifaActual) {
+                    let ruta = buscarRuta(origen, destino)
+                    print("📍 Ruta óptima encontrada:")
+                    print(ruta.joined(separator: " ➡️ "))
+                }
+            }
+            
+        case 4:
+            // ACCESO AL MODO ADMINISTRADOR
+            print("Ingrese la clave de administrador: ", terminator: "")
+            let clave = readLine() ?? ""
+            
+            if clave == CLAVE_ADMIN {
+                var enModoAdmin = true
+                while enModoAdmin {
+                    print("\n🛠️ --- MODO ADMINISTRADOR ---")
+                    print("1. Cambiar precio del pasaje (Tarifa actual: S/ \(String(format: "%.2f", tarifaActual)))")
+                    print("2. Bloquear/Cerrar una estación")
+                    print("3. Desbloquear/Abrir una estación")
+                    print("4. Ver estaciones cerradas")
+                    print("5. Volver al menú de pasajero")
+                    print("Seleccione una opción técnica: ", terminator: "")
+                    
+                    if let entradaAdmin = readLine(), let opcAdmin = Int(entradaAdmin) {
+                        switch opcAdmin {
+                        case 1:
+                            print("Ingrese la nueva tarifa: S/ ", terminator: "")
+                            if let entradaTarifa = readLine(), let nuevaTarifa = Double(entradaTarifa), nuevaTarifa >= 0 {
+                                tarifaActual = nuevaTarifa
+                                print("✅ Tarifa actualizada con éxito a: S/ \(String(format: "%.2f", tarifaActual))")
+                            } else {
+                                print("❌ Tarifa inválida.")
+                            }
+                        case 2:
+                            print("Ingrese el nombre de la estación a cerrar: ", terminator: "")
+                            let est = readLine() ?? ""
+                            if estacionALinea[est] != nil {
+                                estacionesBloqueadas.insert(est)
+                                print("🔒 La estación '\(est)' ha sido cerrada por seguridad.")
+                            } else {
+                                print("❌ La estación no existe.")
+                            }
+                        case 3:
+                            print("Ingrese el nombre de la estación a reabrir: ", terminator: "")
+                            let est = readLine() ?? ""
+                            if estacionesBloqueadas.contains(est) {
+                                estacionesBloqueadas.remove(est)
+                                print("🔓 La estación '\(est)' vuelve a estar operativa.")
+                            } else {
+                                print("❌ La estación no estaba bloqueada.")
+                            }
+                        case 4:
+                            if estacionesBloqueadas.isEmpty {
+                                print("🟢 Todas las estaciones se encuentran operativas en este momento.")
+                            } else {
+                                print("🚨 Estaciones cerradas: \(estacionesBloqueadas.joined(separator: ", "))")
+                            }
+                        case 5:
+                            print("Saliendo del modo administrador...")
+                            enModoAdmin = false
+                        default:
+                            print("❌ Opción inválida.")
+                        }
+                    }
+                }
+            } else {
+                print("❌ Clave incorrecta. Acceso denegado.")
+            }
+            
+        case 5:
+            print("\n👋 ¡Gracias por usar el servicio de transporte!")
+            ejecutarMenu = false
+            
+        default:
+            print("❌ Opción no válida. Intente del 1 al 5.")
+        }
+    } else {
+        print("❌ Por favor, introduzca un número válido.")
+    }
+}

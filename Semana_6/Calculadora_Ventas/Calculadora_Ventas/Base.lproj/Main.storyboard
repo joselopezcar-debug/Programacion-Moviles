@@ -87,7 +87,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Calcular"/>
                                 <connections>
-                                    <segue destination="tqq-Bc-W4C" kind="show" id="uW2-Yk-5ss"/>
+                                    <segue destination="tqq-Bc-W4C" kind="show" identifier="showResultado" id="uW2-Yk-5ss"/>
                                 </connections>
                             </button>
                         </subviews>

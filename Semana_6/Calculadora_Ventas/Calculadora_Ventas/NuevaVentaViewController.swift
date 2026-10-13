@@ -22,6 +22,9 @@ class NuevaVentaViewController: UIViewController {
 
     // Preparación del envío de datos antes de ejecutar el Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Identificador del Segue: \(String(describing: segue.identifier))")
+        print("Precio ingresado: \(txtPrecioUnitario.text ?? "Vacio")")
+        
         if segue.identifier == "showResultado" {
             // Conversión de campos de texto a Double
             let precioUnitario = Double(txtPrecioUnitario.text ?? "") ?? 0.0

@@ -7,23 +7,15 @@
 
 import UIKit
 
-class Profesor: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class Profesor: NSObject {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var nombre: String = ""
+    var cargo: String = ""
+    var foto: UIImage?
+    
+    init(nombre: String, cargo: String, foto: UIImage?) {
+        self.nombre = nombre
+        self.cargo = cargo
+        self.foto = foto
     }
-    */
-
 }

@@ -2,28 +2,22 @@
 //  CulturaTableViewCell.swift
 //  Exploración_de_Culturas
 //
-//  Created by Tecsup on 13/10/26.
+//  Created by Tecsup on 15/10/26.
 //
 
 import UIKit
 
-class CulturaTableViewCell: UIViewController {
+class CulturaTableViewCell: UITableViewCell {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 
-        // Do any additional setup after loading the view.
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

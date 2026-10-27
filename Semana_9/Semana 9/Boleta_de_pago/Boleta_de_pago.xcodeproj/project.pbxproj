@@ -7,32 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CD699F31307EA02F00A3B1D0 /* Exploración_de_Culturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exploración_de_Culturas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5C52273090D9DE00EFE064 /* Boleta_de_pago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boleta_de_pago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CD699F43307EA03100A3B1D0 /* Exceptions for "Exploración_de_Culturas" folder in "Exploración_de_Culturas" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = CD699F30307EA02F00A3B1D0 /* Exploración_de_Culturas */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CD699F33307EA02F00A3B1D0 /* Exploración_de_Culturas */ = {
+		CD5C52293090D9DE00EFE064 /* Boleta_de_pago */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CD699F43307EA03100A3B1D0 /* Exceptions for "Exploración_de_Culturas" folder in "Exploración_de_Culturas" target */,
-			);
-			path = "Exploración_de_Culturas";
+			path = Boleta_de_pago;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CD699F2E307EA02F00A3B1D0 /* Frameworks */ = {
+		CD5C52243090D9DE00EFE064 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD699F28307EA02F00A3B1D0 = {
+		CD5C521E3090D9DE00EFE064 = {
 			isa = PBXGroup;
 			children = (
-				CD699F33307EA02F00A3B1D0 /* Exploración_de_Culturas */,
-				CD699F32307EA02F00A3B1D0 /* Products */,
+				CD5C52293090D9DE00EFE064 /* Boleta_de_pago */,
+				CD5C52283090D9DE00EFE064 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CD699F32307EA02F00A3B1D0 /* Products */ = {
+		CD5C52283090D9DE00EFE064 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD699F31307EA02F00A3B1D0 /* Exploración_de_Culturas.app */,
+				CD5C52273090D9DE00EFE064 /* Boleta_de_pago.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD699F30307EA02F00A3B1D0 /* Exploración_de_Culturas */ = {
+		CD5C52263090D9DE00EFE064 /* Boleta_de_pago */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD699F44307EA03100A3B1D0 /* Build configuration list for PBXNativeTarget "Exploración_de_Culturas" */;
+			buildConfigurationList = CD5C52323090D9E100EFE064 /* Build configuration list for PBXNativeTarget "Boleta_de_pago" */;
 			buildPhases = (
-				CD699F2D307EA02F00A3B1D0 /* Sources */,
-				CD699F2E307EA02F00A3B1D0 /* Frameworks */,
-				CD699F2F307EA02F00A3B1D0 /* Resources */,
+				CD5C52233090D9DE00EFE064 /* Sources */,
+				CD5C52243090D9DE00EFE064 /* Frameworks */,
+				CD5C52253090D9DE00EFE064 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CD699F33307EA02F00A3B1D0 /* Exploración_de_Culturas */,
+				CD5C52293090D9DE00EFE064 /* Boleta_de_pago */,
 			);
-			name = "Exploración_de_Culturas";
+			name = Boleta_de_pago;
 			packageProductDependencies = (
 			);
-			productName = "Exploración_de_Culturas";
-			productReference = CD699F31307EA02F00A3B1D0 /* Exploración_de_Culturas.app */;
+			productName = Boleta_de_pago;
+			productReference = CD5C52273090D9DE00EFE064 /* Boleta_de_pago.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CD699F29307EA02F00A3B1D0 /* Project object */ = {
+		CD5C521F3090D9DE00EFE064 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					CD699F30307EA02F00A3B1D0 = {
+					CD5C52263090D9DE00EFE064 = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
-			buildConfigurationList = CD699F2C307EA02F00A3B1D0 /* Build configuration list for PBXProject "Exploración_de_Culturas" */;
+			buildConfigurationList = CD5C52223090D9DE00EFE064 /* Build configuration list for PBXProject "Boleta_de_pago" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CD699F28307EA02F00A3B1D0;
+			mainGroup = CD5C521E3090D9DE00EFE064;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CD699F32307EA02F00A3B1D0 /* Products */;
+			productRefGroup = CD5C52283090D9DE00EFE064 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD699F30307EA02F00A3B1D0 /* Exploración_de_Culturas */,
+				CD5C52263090D9DE00EFE064 /* Boleta_de_pago */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CD699F2F307EA02F00A3B1D0 /* Resources */ = {
+		CD5C52253090D9DE00EFE064 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CD699F2D307EA02F00A3B1D0 /* Sources */ = {
+		CD5C52233090D9DE00EFE064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,69 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CD699F45307EA03100A3B1D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exploración_de_Culturas/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lopez.Exploracio-n-de-Culturas";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CD699F46307EA03100A3B1D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exploración_de_Culturas/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lopez.Exploracio-n-de-Culturas";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CD699F47307EA03100A3B1D0 /* Debug */ = {
+		CD5C52303090D9E100EFE064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		CD699F48307EA03100A3B1D0 /* Release */ = {
+		CD5C52313090D9E100EFE064 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -319,28 +244,90 @@
 			};
 			name = Release;
 		};
+		CD5C52333090D9E100EFE064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pe.tecsup.pma.Boleta-de-pago";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD5C52343090D9E100EFE064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pe.tecsup.pma.Boleta-de-pago";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD699F2C307EA02F00A3B1D0 /* Build configuration list for PBXProject "Exploración_de_Culturas" */ = {
+		CD5C52223090D9DE00EFE064 /* Build configuration list for PBXProject "Boleta_de_pago" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD699F47307EA03100A3B1D0 /* Debug */,
-				CD699F48307EA03100A3B1D0 /* Release */,
+				CD5C52303090D9E100EFE064 /* Debug */,
+				CD5C52313090D9E100EFE064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD699F44307EA03100A3B1D0 /* Build configuration list for PBXNativeTarget "Exploración_de_Culturas" */ = {
+		CD5C52323090D9E100EFE064 /* Build configuration list for PBXNativeTarget "Boleta_de_pago" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD699F45307EA03100A3B1D0 /* Debug */,
-				CD699F46307EA03100A3B1D0 /* Release */,
+				CD5C52333090D9E100EFE064 /* Debug */,
+				CD5C52343090D9E100EFE064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CD699F29307EA02F00A3B1D0 /* Project object */;
+	rootObject = CD5C521F3090D9DE00EFE064 /* Project object */;
 }

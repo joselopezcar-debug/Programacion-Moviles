@@ -7,23 +7,56 @@
 
 import UIKit
 
-class OpcionesViewController: UIViewController {
+class OpcionesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var culturaSeleccionada: Cultura?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        if let cultura = culturaSeleccionada {
+            title = cultura.nombre
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return culturaSeleccionada?.atractivos.count ?? 0
+    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaOpcion", for: indexPath) as! OpcionTableViewCell
+        
+        if let atractivo = culturaSeleccionada?.atractivos[indexPath.row] {
+            cell.opcionTituloLabel.text = atractivo.titulo
+            cell.opcionImageView.image = atractivo.imagen
+        }
+        
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+
+    // MARK: - Selección de celda y paso a Detalle
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let atractivo = culturaSeleccionada?.atractivos[indexPath.row] {
+            performSegue(withIdentifier: "irADetalle", sender: atractivo)
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "irADetalle",
+           let destinoVC = segue.destination as? DetalleViewController,
+           let atractivo = sender as? Atractivo {
+            destinoVC.atractivoSeleccionado = atractivo
+        }
     }
-    */
-
 }

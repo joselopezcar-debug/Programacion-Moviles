@@ -9,21 +9,21 @@ import UIKit
 
 class DetalleViewController: UIViewController {
 
+    @IBOutlet weak var tituloLabel: UILabel!
+    @IBOutlet weak var imagenImageView: UIImageView!
+    
+    @IBOutlet weak var descripciontestfield: UITextView!
+    
+    var atractivoSeleccionado: Atractivo?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let atractivo = atractivoSeleccionado {
+            title = atractivo.titulo
+            tituloLabel.text = atractivo.titulo
+            imagenImageView.image = atractivo.imagen
+            descripciontestfield.text = atractivo.descripcion
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
